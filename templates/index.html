@@ -1,0 +1,10 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<center>
+    <div class="container">   
+    <h1>WELCOME {{ request.user}} </h1>
+    <h1>Your User ID is {{ request.user.id }}</h1>
+    </div>
+</center>
+{% endblock %}

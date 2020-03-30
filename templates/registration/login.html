@@ -1,0 +1,31 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <div>
+                
+                    <h1>MY LIBRARY</h1>
+                </div>
+
+                {{ form.as_p }}
+                <button type="submit">submit</button>
+
+                <div id="formFooter">
+                    <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+                    <p>If you do not have account <a href="{% url 'sign_up' %}">SIGN UP</a></p>
+                </div>
+
+
+            </div>
+          
+    </form>
+
+
+
+
+    </div>
+{% endblock %}

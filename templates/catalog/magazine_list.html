@@ -1,0 +1,29 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+    <h1>Magazines List</h1>
+
+    {% if magazine_list %}
+
+    <div class="row mx-auto">
+      {% for magazine in magazine_list %}
+
+
+    <div class="container">
+      
+      <img class="card" src="{{ magazine.pic.url }}" alt="Sample Title" height="400px" width="400px">
+        <div class="body">
+          <h2 class="title">    <a href="{{ magazine.get_absolute_url }}">{{ magazine.title }}</a> {{magazine.author}}</h2>
+        </div>
+      </div>
+  
+      {% endfor %}
+    </div>
+
+
+    {% else %}
+      <p class="none">There are no magazines.</p>
+    {% endif %}       
+{% endblock %}
+

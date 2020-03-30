@@ -1,0 +1,28 @@
+{% extends 'base_generic.html' %}
+{% block content %}
+
+        
+    <table class="table">
+<thead>
+  <tr>
+    <th>Student Number</th>
+    <th>Name</th>
+    <th>Contact</th> 
+
+  </tr>
+</thead>
+<tbody>
+   {% for s in students %}
+    <tr>
+    <td><a href="{% url 'student_detail' pk=s.id %}">{{ s.roll_no }}</a></td>
+    <td>{{ s.name }}</a></td>
+    <td>{{ s.contact_no }}</a></td>
+    
+    </tr>
+   {% endfor %}
+   
+</tbody>
+  
+</table>
+    </div>
+{% endblock %}

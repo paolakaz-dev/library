@@ -1,0 +1,39 @@
+
+{% extends "base_generic.html" %}
+{% block content %}
+
+<h4>The Overview of currect actions</h4>
+<span>Welcome in your profile {{ request.user }} </span>
+
+<table class="table">
+<thead>
+  <tr>
+    <th>Book Title</th>
+    <th>Magazine Title</th> 
+    <th>Issue Date</th>
+    <th>return Date</th>
+  </tr>
+</thead>
+<tbody>
+
+    
+   {% for request.borrower in borrowers %}
+      {% for b in borrowers %} 
+      <tr>
+    
+ 
+      {% endfor %}
+     
+      <td>{{ borrower.book.title}}</td>
+      <td>{{ borrower.magazine }}</td>
+      <td>{{ borrower.issue_date}}</td>
+      <td>{{ borrower.return_date }}</td>
+      </tr>
+   {% endfor %}
+   
+</tbody>
+  
+</table>
+
+
+{% endblock %}

@@ -1,0 +1,34 @@
+
+{% extends "base_generic.html" %}
+{% block content %}
+
+<h4>The Overview of currect actions</h4>
+
+<table class="table">
+<thead>
+  <tr>
+    <th>Student Number</th>
+    <th>Title</th>
+    <th>Issue Date</th>
+    <th>return Date</th>
+  </tr>
+</thead>
+<tbody>
+   {% for borrower in borrowers %}
+   
+      <tr>
+      
+     
+      <td>{{ borrower.student.roll_no}}</td>
+      <td>{{ borrower.book.title}} {{ borrower.magazine }}</td>
+      <td>{{ borrower.issue_date}}</td>
+      <td>{{ borrower.return_date }}</td>
+      </tr>
+   {% endfor %}
+   
+</tbody>
+  
+</table>
+
+
+{% endblock %}

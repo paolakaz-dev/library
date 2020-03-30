@@ -1,0 +1,34 @@
+{% extends "base_generic.html" %}
+{% block content %}
+    <div class="container">
+
+
+        <div class="preview-pic">
+            <div class="img" id="pic-1"><img
+                    src="{{ magazine.pic.url }}" height="500" width="400"/>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="details">
+        <h1>Title: {{ magazine.title }}</h1>
+
+        <p><strong>Author:</strong>{{ magazine.author }}</p>
+        <p><strong>Summary:</strong> {{ magazine.summary }}</p>
+        <p><strong>Language:</strong> {{ magazine.language }}</p>
+            <h4>Copies</h4>
+            {% if user.is_superuser %}
+                <a class="btn" href="{% url 'magazine_delete' pk=magazine.id %}">DELETE</a>
+                <a class="btn" href="{% url 'magazine_update' pk=magazine.id %}">Update</a>
+
+            {% endif %}
+            {% if magazine.available_copies %}
+                <br>
+                NUMBER OF COPIES {{ magazine.available_copies }}<br>
+                <a class="btn" href="{% url 'request_issue_mag' pk=magazine.id %}">Issue</a>
+            {% endif %}      </div>
+
+    </div>
+{% endblock %}
+

@@ -1,0 +1,28 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  
+    <h1>Book List</h1>
+
+    {% if book_list %}
+
+    <div class="row mx-auto">
+      {% for book in book_list %}
+
+
+      <img class="img" src="{{ book.pic.url }}" alt="Sample Title" height="400px" width="400px">
+        <div class="body">
+          <h2 class="title"><a href="{{ book.get_absolute_url }}">{{ book.title }}</a> {{book.author}}</h2>
+        </div>
+      </div>
+
+      {% endfor %}
+
+
+
+    {% else %}
+      <p class="none">There are no books.</p>
+    {% endif %} 
+     
+{% endblock %}
+
