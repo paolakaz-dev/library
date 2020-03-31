@@ -1,4 +1,4 @@
-{% extends "base_generic.html" %}
+{% extends "base.html" %}
 
 {% block content %}
     <div class="container">
@@ -18,12 +18,8 @@
 
         <p><strong>Author:</strong>{{ book.author }}</p>
         <p><strong>Summary:</strong> {{ book.summary }}</p>
-        <p><strong>ISBN:</strong> {{ book.isbn }}</p>
-        <p><strong>Language:</strong> {{ book.language }}</p>
-        <p><strong>Genre:</strong>
-            {% for genre in book.genre.all %}{{ genre }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
             {% if user.is_superuser %}
-                <a class="btn" href="{% url 'book_delete' pk=book.id %}">DELETE</a>
+                <a class="btn" href="{% url 'book_delete' pk=book.id %}">Delete</a>
                 <a class="btn" href="{% url 'book_update' pk=book.id %}">Update</a>
 
             {% endif %}

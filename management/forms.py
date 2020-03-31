@@ -16,7 +16,7 @@ class MagazineForm(forms.ModelForm):
 
 class BorrowForm(forms.ModelForm):
     class Meta:
-        model = Borrower
+        model = BookBorrower
         exclude = '__all__'
 
 

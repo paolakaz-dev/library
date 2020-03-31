@@ -1,4 +1,4 @@
-{% extends 'base_generic.html' %}
+{% extends 'base.html' %}
 {% block content %}
 
         
@@ -8,15 +8,17 @@
     <th>Student Number</th>
     <th>Name</th>
     <th>Contact</th> 
+    <th>Email</th> 
 
   </tr>
 </thead>
 <tbody>
    {% for s in students %}
     <tr>
-    <td><a href="{% url 'student_detail' pk=s.id %}">{{ s.roll_no }}</a></td>
+    <td><a href="{% url 'student_detail' pk=s.id %}">{{ s.nr }}</a></td>
     <td>{{ s.name }}</a></td>
-    <td>{{ s.contact_no }}</a></td>
+    <td>{{ s.contact_nr }}</a></td>
+    <td>{{ s.email }}</a></td>
     
     </tr>
    {% endfor %}

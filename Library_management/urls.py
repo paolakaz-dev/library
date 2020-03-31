@@ -39,7 +39,7 @@ urlpatterns = [
     path('book/<int:pk>/request_issue/', views.student_request_issue, name='request_issue'),
     path('magazine/<int:pk>/request_issue_mag/', views.student_request_issue_mag, name='request_issue_mag'),
 
-    path('borrower/', views.BorrowerView, name='borrower'),
+    path('bookborrower/', views.BookBorrowerView, name='bookborrower'),
     path('delete_account/', views.delete_account, name='delete_account'),
     path('password_reset/', views.password_reset, name='password_reset'),
     path('request_password_reset/', views.request_password_reset, name='request_password_reset'),

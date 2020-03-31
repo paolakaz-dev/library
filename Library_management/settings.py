@@ -4,7 +4,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY - KEEP THE KEY SECRECT
-SECRET_KEY = '!!n61=9-q!_u=-0kcyu^88$r@2fpm6!b3cnd-5k+h7c$mv7v@$'
+SECRET_KEY = ''
 
 # SECURITY TRUE OR FALSE DEP. ON THE PRODUCTION
 DEBUG = True

@@ -1,5 +1,5 @@
 
-{% extends "base_generic.html" %}
+{% extends "base.html" %}
 {% block content %}
 
 <h4>The Overview of currect actions</h4>
@@ -19,10 +19,10 @@
       <tr>
       
      
-      <td>{{ borrower.student.roll_no}}</td>
-      <td>{{ borrower.book.title}} {{ borrower.magazine }}</td>
-      <td>{{ borrower.issue_date}}</td>
-      <td>{{ borrower.return_date }}</td>
+      <td>{{ bookborrower.student.nr}}</td>
+      <td>{{ bookborrower.book.title}} {{ bookborrower.magazine }}</td>
+      <td>{{ bookborrower.issue_date}}</td>
+      <td>{{ bookborrower.return_date }}</td>
       </tr>
    {% endfor %}
    
