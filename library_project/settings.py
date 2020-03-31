@@ -19,7 +19,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'management',
+    'library_app',
     'crispy_forms',
     'django.contrib.staticfiles'
 ]
@@ -34,7 +34,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware'
 ]
 
-ROOT_URLCONF = 'Library_management.urls'
+ROOT_URLCONF = 'library_project.urls'
 
 TEMPLATES = [
     {
@@ -53,7 +53,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Library_management.wsgi.application'
+WSGI_APPLICATION = 'library_project.wsgi.application'
 
 # DATABASE INFO
 

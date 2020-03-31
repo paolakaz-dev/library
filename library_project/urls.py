@@ -6,7 +6,7 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from management import views
+from library_app import views
 
 
 urlpatterns = [
@@ -34,7 +34,7 @@ urlpatterns = [
     path('student<int:pk>/update/', views.StudentUpdate, name='student_update'),
     path('student/<int:pk>', views.StudentDetail, name='student_detail'),
     path('student/', views.StudentList, name='student_list'),
-    path('student/book_list', views.student_BookListView, name='book_student'),
+    path('student/book_student', views.student_BookListView, name='book_student'),
     path('student/magazine_list', views.student_MagazineListView, name='magazine_student'),
     path('book/<int:pk>/request_issue/', views.student_request_issue, name='request_issue'),
     path('magazine/<int:pk>/request_issue_mag/', views.student_request_issue_mag, name='request_issue_mag'),

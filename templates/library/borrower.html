@@ -5,6 +5,7 @@
 <h4>The Overview of currect actions</h4>
 
 <table class="table">
+<h1>BOOKS</h1>
 <thead>
   <tr>
     <th>Student Number</th>
@@ -14,13 +15,40 @@
   </tr>
 </thead>
 <tbody>
-   {% for borrower in borrowers %}
+   {% for bookborrower in bookborrowers %}
    
       <tr>
       
      
       <td>{{ bookborrower.student.nr}}</td>
-      <td>{{ bookborrower.book.title}} {{ bookborrower.magazine }}</td>
+      <td>{{ bookborrower.book.title}}</td>
+      <td>{{ bookborrower.issue_date}}</td>
+      <td>{{ bookborrower.return_date }}</td>
+      </tr>
+   {% endfor %}
+   
+</tbody>
+  
+</table>
+
+<table class="table">
+<h1>MAGAZINES</h1>
+<thead>
+  <tr>
+    <th>Student Number</th>
+    <th>Title</th>
+    <th>Issue Date</th>
+    <th>return Date</th>
+  </tr>
+</thead>
+<tbody>
+   {% for bookborrower in bookborrowers %}
+   
+      <tr>
+      
+     
+      <td>{{ bookborrower.student.nr}}</td>
+      <td>{{ bookborrower.book.title}}</td>
       <td>{{ bookborrower.issue_date}}</td>
       <td>{{ bookborrower.return_date }}</td>
       </tr>

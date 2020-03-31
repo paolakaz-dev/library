@@ -10,7 +10,7 @@ import datetime
 class Book(models.Model):
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=100)
-    summary = models.TextField(max_length=1000, help_text="Enter a brief description of the book")
+    summary = models.TextField(max_length=1000)
     total_copies = models.IntegerField()
     available_copies = models.IntegerField()
     pic=models.ImageField(blank=True, null=True, upload_to='book_image')
@@ -22,7 +22,7 @@ class Book(models.Model):
 class Magazine(models.Model):
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=100)
-    summary = models.TextField(max_length=1000, help_text="Enter a brief description of the magazine")
+    summary = models.TextField(max_length=1000)
     total_copies = models.IntegerField()
     available_copies = models.IntegerField()
     pic=models.ImageField(blank=True, null=True, upload_to='magazine_image')
@@ -59,7 +59,7 @@ class BookBorrower(models.Model):
     issue_date = models.DateTimeField( null=True,blank=True)
     return_date = models.DateTimeField( null=True,blank=True)
     def __str__(self):
-        return self.student.name+" borrowed "+self.book.title 
+        return self.student.name+" borrowed "+ self.book.title 
 
 #magazine = models.ForeignKey('Magazine', on_delete=models.CASCADE, null=True, help_text= "You can check out up to 3 magazines" )
 #+" and "+self.magazine.title

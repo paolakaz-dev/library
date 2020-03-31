@@ -56,16 +56,16 @@
                 {% endif %} 
                 
                     {% if user.is_authenticated %}
-<div class="dropdown float">
-    <button type="button">{{ request.user }}</button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="{% url 'book_student' %}">My Profile</a>
-      <a class="dropdown-item" href="{% url 'change_password' %}">Change Password</a>
-      <a class="dropdown-item" href="{% url 'request_password_reset' %}">Reset Password</a>
-      <a class="dropdown-item" href="{% url 'delete_account' %}">Delete Account</a>
-      <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
-    </div>
-  </div>
+                        <div class="dropdown float">
+                            <button type="button">{{ request.user }}</button>
+                            <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{% url 'student_detail' pk=request.user.id %}">My Profile</a>
+                            <a class="dropdown-item" href="{% url 'change_password' %}">Change Password</a>
+                            <a class="dropdown-item" href="{% url 'request_password_reset' %}">Reset Password</a>
+                            <a class="dropdown-item" href="{% url 'delete_account' %}">Delete Account</a>
+                            <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                            </div>
+                        </div>
                          {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'login' %}">Login</a>
