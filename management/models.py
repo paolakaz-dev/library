@@ -7,7 +7,6 @@ import datetime
 
 
 # BOOK 
-# RELATION WITH GANGRE AND LANGUAGE BOOK
 class Book(models.Model):
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=100)
@@ -20,7 +19,6 @@ class Book(models.Model):
     def get_absolute_url(self):
         return reverse('book-detail', args=[str(self.id)])
 #MAGAZINE
-# RELATION WITH LANGUAGE
 class Magazine(models.Model):
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=100)
